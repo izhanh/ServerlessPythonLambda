@@ -3,7 +3,7 @@ import requests
 
 # Main
 
-def getIp2(event, context):
+def getIp(event, context):
     url = "https://www.jsonip.com"
     resp = requests.get(url)
     respJson = json.loads(resp.text)
@@ -15,5 +15,3 @@ def getIp2(event, context):
 
     print(response)
     return response
-
-seleniumTest("", "")

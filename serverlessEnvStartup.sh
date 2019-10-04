@@ -18,3 +18,4 @@ apt install -y virtualenv
 
 # Install PIP inside the env
 pip install -r requirements.txt
+echo "done"
