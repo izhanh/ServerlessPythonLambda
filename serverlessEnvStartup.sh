@@ -13,7 +13,7 @@ source venv/bin/activate
 
 # Install dependencies
 npm install -g serverless
-npm install -g serverless-python-requirements
+npm install serverless-python-requirements
 apt install -y virtualenv
 
 # Install PIP inside the env

@@ -3,7 +3,7 @@ import requests
 
 # Main
 
-def seleniumTest(event, context):
+def getIp2(event, context):
     url = "https://www.jsonip.com"
     resp = requests.get(url)
     respJson = json.loads(resp.text)

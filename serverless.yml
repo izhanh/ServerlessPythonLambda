@@ -1,14 +1,14 @@
-service: selenium
+service: python2
 
 provider:
   name: aws
   runtime: python3.6
   region: eu-west-1
-  timeout: 600
+  timeout: 30
 
 functions:
-  selenium:
-    handler: handler.seleniumTest
+  getip2:
+    handler: handler.getIp2
 
 plugins:
   - serverless-python-requirements
