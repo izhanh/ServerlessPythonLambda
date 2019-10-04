@@ -1,5 +1,5 @@
-# ServerlessLambdaSelenium
-Run Webdriver tests in Lambda with Serverless Framework + Python
+# ServerlessPythonLambda
+Run Python functions in Lambda with Serverless Framework
 
 ## Requirements
 
@@ -13,3 +13,7 @@ Run Webdriver tests in Lambda with Serverless Framework + Python
 
 (Pure AWS)
 * Zip the entire folder and upload it to AWS Lambda
+
+## Install
+
+- Setup the environment to work with `./serverlessEnvStartup.sh`

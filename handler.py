@@ -1,22 +1,17 @@
-import webdriverFunctions
+import json
+import requests
 
 # Main
 
 def seleniumTest(event, context):
-    driver = webdriverFunctions.getChromeDriver()
-
-    webdriverFunctions.navigate(driver, 'https://www.google.com/')
-    body = "Headless Chrome Initialized, Page title: [{}]".format(webdriverFunctions.getDriverTitle(driver))
-    print(body)
+    url = "https://www.jsonip.com"
+    resp = requests.get(url)
+    respJson = json.loads(resp.text)
 
     response = {
         "statusCode": 200,
-        "body": body
+        "body": respJson['ip']
     }
-
-    #print(webdriverFunctions.getDriverVersion(driver))
-    webdriverFunctions.saveScreenshot(driver, "success.png")
-    webdriverFunctions.closeDriverSession(driver)
 
     print(response)
     return response
